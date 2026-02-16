@@ -33,8 +33,11 @@ int main() {
 
         } while (more == 'y' || more == 'Y');
 
-        cout << "\n\t\tSalesperson\n";
+        cout << "\n---------------------------------------------\n";
+        cout << "\t\tSalesperson\n";
+        cout << "---------------------------------------------\n";
         cout << "Product\t1\t2\t3\t4\tTotal\n";
+        cout << "---------------------------------------------\n";
 
         double grandTotal = 0;
 
@@ -52,6 +55,8 @@ int main() {
             grandTotal += rowTotal;
         }
 
+        cout << "---------------------------------------------\n";
+
         // Column totals
         cout << "Total\t";
         for (int j = 0; j < 4; j++) {
@@ -63,7 +68,15 @@ int main() {
         }
 
         cout << grandTotal << endl;
+        
 
+        cout << "\nDo you want to run the program again? (y/n): ";
+        cin >> choice;
+
+    } while (choice == 'y' || choice == 'Y');
+
+    return 0;
+}
         cout << "\nDo you want to run the program again? (y/n): ";
         cin >> choice;
 
