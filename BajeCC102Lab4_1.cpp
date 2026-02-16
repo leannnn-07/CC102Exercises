@@ -30,12 +30,14 @@ int main() {
             average[i] = sum / quizzes;
         }
 
-        // Display table header
-        cout << "\nStudent\t";
+        // ====== TABLE HEADER ======
+        cout << "\n---------------------------------------------\n";
+        cout << "Student\t";
         for (int j = 0; j < quizzes; j++) {
             cout << "Q" << j + 1 << "\t";
         }
         cout << "Average\n";
+        cout << "---------------------------------------------\n";
 
         // Display table content
         for (int i = 0; i < students; i++) {
@@ -47,6 +49,8 @@ int main() {
 
             cout << average[i] << endl;
         }
+
+    
 
         cout << "\nDo you want to run the program again? (y/n): ";
         cin >> choice;
