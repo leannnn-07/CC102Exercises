@@ -68,15 +68,8 @@ int main() {
         }
 
         cout << grandTotal << endl;
-        
+        cout << "---------------------------------------------\n";
 
-        cout << "\nDo you want to run the program again? (y/n): ";
-        cin >> choice;
-
-    } while (choice == 'y' || choice == 'Y');
-
-    return 0;
-}
         cout << "\nDo you want to run the program again? (y/n): ";
         cin >> choice;
 
