@@ -16,13 +16,13 @@ bool isPrime(int n) {
     return true;
 }
 
-int countPrimesInFile(string filename) {
-    ifstream inputFile(filename);
+int countPrimesInFile(string myFile) {
+    ifstream inputFile(myFile);
     int count = 0;
     int number;
 
     if (!inputFile) {
-        cerr << "Error: Could not open file " << filename << endl;
+        cerr << "Error: Could not open file " << myFile << endl;
         return -1; 
     }
 
@@ -34,13 +34,15 @@ int countPrimesInFile(string filename) {
     inputFile.close();
     return count;
 }
+
 int main() {
-    string filename = "NUM.TXT";
-    int primeCount = countPrimesInFile(filename);
+    string myFile = "myFile.txt"; 
+    int primeCount = countPrimesInFile(myFile);
 
     if (primeCount != -1) {
-        cout << "Total prime numbers in " << filename << ": " << primeCount << endl;
+        cout << "Total prime numbers in " << myFile << ": " << primeCount << endl;
     }
 
     return 0;
 }
+
